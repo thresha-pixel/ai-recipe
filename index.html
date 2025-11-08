@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Recipe Generator 🥰</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>AI Recipe Generator </h1>
+      <p class="tagline">Where Taste Meets Technology 🥙🍽️..</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Tell us what you like 🤍....</h2>
+      <form id="recipe-form" autocomplete="on">
+        <div class="field-grid">
+          <label class="field">
+            <span class="label-text">Dietary preference 💪🏻</span>
+            <select id="diet" name="diet" required>
+              <option value="any">Non-Vegetarian</option>
+              <option value="vegan">Vegan</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="gluten_free">Gluten-free</option>
+              <option value="keto">Keto</option>
+              <option value="paleo">Paleo</option>
+              <option value="dairy_free">Dairy-free</option>
+              <option value="nut_free">Nut-free</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="label-text">Cuisine 🍴 (optional)</span>
+            <select id="cuisine" name="cuisine">
+              <option value="any">Any</option>
+              <option value="italian">Italian</option>
+              <option value="mexican">Mexican</option>
+              <option value="indian">Indian</option>
+              <option value="thai">Thai</option>
+              <option value="japanese">Japanese</option>
+              <option value="mediterranean">Mediterranean</option>
+            </select>
+          </label>
+
+          <label class="field field-span-2">
+            <span class="label-text">Ingredients you have 🍻 (comma-separated)</span>
+            <textarea id="ingredients" name="ingredients" rows="3" placeholder="e.g., tomato, chicken, garlic, spinach"></textarea>
+          </label>
+
+          <label class="field">
+            <span class="label-text">Time available ⌛.....</span>
+            <select id="time" name="time">
+              <option value="any">Any</option>
+              <option value="15">Up to 15 min</option>
+              <option value="30">Up to 30 min</option>
+              <option value="45">Up to 45 min</option>
+              <option value="60">Up to 60 min</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="label-text">Servings 🥪🍜</span>
+            <input id="servings" name="servings" type="number" min="1" max="12" value="2" />
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="generate-btn" class="btn primary">Generate recipe....</button>
+          <button type="button" id="clear-btn" class="btn">Delete...</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="output" class="card output" aria-live="polite" aria-busy="false">
+      <div class="placeholder">
+        <i class="fa-solid fa-utensils"></i>
+        <p>Your recipe will appear here ☘️.</p>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Discover, cook, enjoy. Satisfy your hunger in minutes ♥.</p>
+    </div>
+  </footer>
+
+  <script src="script_v1.js"></script>
+</body>
+</html>
